@@ -1,0 +1,13 @@
+xterm*faceName: DejaVu Sans Mono:size=10:antialias=false
+xterm*termName: xterm-256color
+xterm*foreground: rgb:ff/ff/ff
+xterm*background: rgb:00/00/00
+
+Xft.antialias: true
+Xft.autohint: false
+Xft.dpi: 96
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
+
