@@ -7,7 +7,7 @@ export ZSH="/home/hk1chga/.oh-my-zsh"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="kolo"
+ZSH_THEME="agnoster"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -96,19 +96,29 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias ls='ls --group-directories-first --color'
 alias ll="ls -la"
-alias ls="ls --group-directories-first --color=tty"
+
+export PATH=$PATH:/snap/bin
+export PATH=$PATH:~/bin
+export PATH=$PATH:~/.local/bin
 
 export PROJECT_HOME=$HOME/projects
 export WORKON_HOME=$HOME/.virtualenvs
 
-export PATH=$PATH:~/.local/bin
+#export HTTP_PROXY=http://tcsproxy:8080
+#export HTTPS_PROXY=https://tcsproxy:8080
+
 source /usr/local/bin/virtualenvwrapper.sh
+
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    # Uncomment the below to include user name in prompt
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+  fi
+}
 
 cd ${HOME}
 
 # source <(helm completion zsh)
 # source <(chef shell-init zsh)
-
-export PATH="/home/hk1chga/miniconda3/bin:$PATH"
-
