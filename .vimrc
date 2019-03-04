@@ -1,8 +1,3 @@
-" Default settings
-set number
-set ruler
-set termguicolors
-
 " If vim-plug is not installed then do so
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -18,6 +13,14 @@ Plug 'metakirby5/codi.vim'
 Plug 'chriskempson/base16-vim'
 
 call plug#end()
+
+set termguicolors " Terminal colors
+set number " Line numbers
+set ruler " Show coordinates in lower right
+
+" I prefer to split right and below
+set splitright
+set splitbelow
 
 " Colorscheme
 colorscheme base16-tomorrow-night
