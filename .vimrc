@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugs')
 
 Plug 'metakirby5/codi.vim'
 Plug 'chriskempson/base16-vim'
+Plug 'SkyLeach/pudb.vim'
 
 call plug#end()
 
