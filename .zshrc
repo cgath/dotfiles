@@ -98,6 +98,8 @@ export EDITOR='vim'
 
 alias ls='ls --group-directories-first --color'
 alias ll="ls -la"
+alias lsl="ls -l"
+
 alias kget="kubectl kubectl get pods,deploy,svc,ingress"
 
 export PATH=$PATH:/snap/bin
