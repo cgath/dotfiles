@@ -62,6 +62,7 @@ plugins=(
  git
  command-not-found
  history
+ kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -100,11 +101,14 @@ alias ls='ls --group-directories-first --color'
 alias ll="ls -la"
 alias lsl="ls -l"
 
-alias kget="kubectl get pods,deploy,svc,ingress"
+alias kget="kubectl get pods,deploy,svc,ingress,rs"
+alias acrlogin="docker login -p 45Qkjn1f1BRsNQxiN7kVAIkQ0xdx8rQ6IFRaGXYA/9g= -u 9001e19b-e2eb-4910-89ca-48ca5c050129 wecapacrdev001.azurecr.io"
+alias stplog="kafka-console-consumer.sh --zookeeper 10.94.0.85:2181 --topic autotaks-soap-consumer-result"
 
 export PATH=$PATH:/snap/bin
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/.local/bin
+export PATH=$PATH:/usr/local/kafka/kafka_2.12-1.1.1/bin
 
 export PROJECT_HOME=$HOME/projects
 export WORKON_HOME=$HOME/.virtualenvs
